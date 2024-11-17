@@ -19,9 +19,14 @@ public class Collatz {
     }
 
 
-        public static void executeCollatz (int N) {
+    public static void executeCollatz (int N) {
         int stepCount = 1;
-            System.out.print(N + " ");
+        System.out.print(N + " ");
+
+        if (N == 1) {
+            System.out.print ("4 2 1 (4)");
+        }
+        else {
 
             while (N != 1) {
                 if (N % 2 == 0) {
@@ -31,9 +36,10 @@ public class Collatz {
                     N = (N * 3) + 1;
                     System.out.print(N + " ");
                 }
-                stepCount ++;
+                stepCount++;
             }
-            System.out.print ("(" + stepCount + ")" );
-
+            System.out.print("(" + stepCount + ")");
         }
+
+    }
 }
