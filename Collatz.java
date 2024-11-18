@@ -23,23 +23,17 @@ public class Collatz {
         int stepCount = 1;
         System.out.print(N + " ");
 
-        if (N == 1) {
-            System.out.print ("4 2 1 (4)");
-        }
-        else {
-
-            while (N != 1) {
-                if (N % 2 == 0) {
-                    N = N / 2;
-                    System.out.print(N + " ");
-                } else {
-                    N = (N * 3) + 1;
-                    System.out.print(N + " ");
-                }
-                stepCount++;
+        do {
+            if (N % 2 == 0) {
+                N = N / 2;
+                System.out.print(N + " ");
+            } else {
+                N = (N * 3) + 1;
+                System.out.print(N + " ");
             }
-            System.out.print("(" + stepCount + ")");
-        }
+            stepCount++;
+        } while (N != 1) ;
 
+     System.out.print("(" + stepCount + ")");
+        }
     }
-}
